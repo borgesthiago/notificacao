@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chamado index{% endblock %}
+
+{% block body %}
+    <h1>Chamado index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Cliente</th>
+                <th>Texto</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for chamado in chamados %}
+            <tr>
+                <td>{{ chamado.id }}</td>
+                <td>{{ chamado.cliente }}</td>
+                <td>{{ chamado.texto }}</td>
+                <td>
+                    <a href="{{ path('chamado_show', {'id': chamado.id}) }}">show</a>
+                    <a href="{{ path('chamado_edit', {'id': chamado.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('chamado_new') }}">Create new</a>
+{% endblock %}

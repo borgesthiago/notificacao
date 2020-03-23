@@ -433,10 +433,16 @@
     "symfony/service-contracts": {
         "version": "v2.0.1"
     },
+    "symfony/slack-notifier": {
+        "version": "v5.0.5"
+    },
     "symfony/stopwatch": {
         "version": "v5.0.5"
     },
     "symfony/string": {
+        "version": "v5.0.5"
+    },
+    "symfony/telegram-notifier": {
         "version": "v5.0.5"
     },
     "symfony/test-pack": {
